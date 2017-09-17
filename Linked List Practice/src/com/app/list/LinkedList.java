@@ -24,22 +24,27 @@ public class LinkedList {
 	public static void main(String[] args) {
 		LinkedList lList = new LinkedList();
 		lList.populateNodes();
-		/** Hackerrank Prob 2 **/
+		/** Hackerrank Prob - insert node at tail. **/
 		lList.insertTailNode(8);
 
+		/** Hackerrank Prob - add node at specific position. **/
 		lList.addNodeSpecificPosition(10, 7);
 
+		/** Hackerrank Prob - Delete a node at specific position. **/
 		lList.deleteNode(2);
 
+		/** Hackerrank Prob - Print Linked List in Reverse Order. **/
 		lList.printInReverse();
 
+		/** Hackerrank Prob - Print All Nodes. **/
 		lList.printAllNodes();
-		
+
+		/** Hackerrank Prob - Reverse a Linked List. **/
 		lList.reverseList();
-		
+
 		System.out.println("\n===========================================\n");
-		
-		/** Hackerrank Prob 1 **/
+
+		/** Hackerrank Prob - Print All Nodes. **/
 		lList.printAllNodes();
 	}
 
@@ -52,7 +57,7 @@ public class LinkedList {
 		tempHead.next = new Node(data);
 	}
 
-	/** Hackerrank Prob 1 **/
+	/** Hackerrank Prob - Print All Nodes. **/
 	public void printAllNodes() {
 		Node tempNode = this.head;
 		while (tempNode != null) {
@@ -108,6 +113,7 @@ public class LinkedList {
 		}
 	}
 
+	/** Hackerrank Prob - Print Nodes in Reverse Order. **/
 	public void printInReverse() {
 		List<Integer> list = new ArrayList<>();
 
@@ -122,16 +128,17 @@ public class LinkedList {
 
 	}
 
+	/** Hackerrank Prob - Reverse Link List **/
 	public void reverseList() {
 		Node current = this.head;
 		Node prev = null;
-		while(current != null){
+		while (current != null) {
 			Node next = current.next;
 			current.next = prev;
 			prev = current;
 			current = next;
 		}
-		
+
 		this.head = prev;
 	}
 
